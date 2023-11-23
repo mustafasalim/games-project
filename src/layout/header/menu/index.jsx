@@ -10,7 +10,7 @@ function Menu() {
 
             {mainMenu.map(menu => (
 
-                <NavLink className="mt-3 p-4 h-4 bg-[#1d2229a6] text-[#FF5722a6] text-[15px] font-bold hover:bg-[#FF5722a6] transition-all leading-6 flex items-center justify-center rounded-md hover:translate-y-1">
+                <NavLink to={menu.path} className="mt-3 p-4 h-4 bg-[#1d2229a6] text-[#FF5722a6] text-[15px] font-bold hover:bg-[#FF5722a6] transition-all leading-6 flex items-center justify-center rounded-md hover:translate-y-1">
 
 
                     {menu.title}

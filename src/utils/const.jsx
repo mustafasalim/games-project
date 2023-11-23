@@ -9,50 +9,50 @@ export const mainMenu = [
 
     },
     {
-        path: "/",
+        path: "/mmorpg",
         title: "MMORPG"
 
     },
     {
-        path: "/",
+        path: "/cardgame",
         title: "Card Game"
 
     },
     {
-        path: "/",
+        path: "/social",
         title: "Social"
 
     },
     {
-        path: "/",
+        path: "/shooter",
         title: "Shooter"
 
     },
     {
-        path: "/",
+        path: "/fighting",
         title: "Fighting"
 
     },
     {
-        path: "/",
+        path: "/arpg",
         title: "ARPG"
 
     },
     {
 
-        path: "/",
+        path: "/actionrpg",
         title: "Action RPG"
     }
     ,
     {
 
-        path: "/",
+        path: "/battleroyale",
         title: "Battle Royale"
     }
     ,
     {
 
-        path: "/",
+        path: "/strategy",
         title: "Strategy"
     }
 

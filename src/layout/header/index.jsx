@@ -5,7 +5,7 @@ import Search from './search'
 
 function Header() {
     return (
-        <header className='mt-5 w-full h-[100px] flex-col items-center justify-between sticky top-0 bg-transparent backdrop-blur-md'>
+        <header className='mt-5 w-full h-[100px] flex-col items-center justify-between sticky top-0 bg-black/[.80] z-10 backdrop-blur-md'>
             <Menu />
             <div className='mt-8'>
                 <Search />

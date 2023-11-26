@@ -2,11 +2,13 @@ import React, { useEffect, useState } from 'react'
 import { getPost } from '../../services/post'
 import { Link } from 'react-router-dom'
 import useGenerateRandomColor from '../../components/randomColor'
+import Search from '../../layout/header/search'
+import RecommendedGames from '../../components/recomendedGmes'
 
 function Home() {
 
-    const { color, generateColor } = useGenerateRandomColor();
 
+    const { color, generateColor } = useGenerateRandomColor();
     const [gameDetail, setGameDatail] = useState(false)
     useEffect(() => {
 
@@ -16,32 +18,45 @@ function Home() {
 
     return (
 
-        <div className='mt-10 flex flex-wrap justify-center'>
+        <>
+            <div className='flex items-center justify-center'>
+                <RecommendedGames>
+                    <Link to="/">
+                        Recommended Games
+                    </Link>
+                </RecommendedGames>
+            </div>
 
-            {gameDetail && gameDetail.map(users => (
+            <div className=' flex flex-wrap justify-center'>
 
-                <Link to={users.game_url}>
-                    <button
-                        style={{
-                            backgroundColor: "#" + color
-                        }}
-                        onMouseOver={generateColor} className='w-[400px] m-5  rounded-md overflow-hidden relative'>
-                        <img className='w-full h-full object-cover transition-all hover:translate-x-2 hover:-translate-y-2' src={users.thumbnail} alt="" />
+                {gameDetail && gameDetail.map(users => (
 
-                        <div className='absolute bottom-0 right-0 px-4 bg-gray-800'>
-                            {users.platform}
+                    <Link to={users.game_url}>
+                        <div className='shadow-2xl m-5 '>
+                            <div
+                                style={{
+                                    backgroundColor: "#" + color
+                                }}
+                                onMouseOver={generateColor} className='w-[400px]  rounded-md overflow-hidden relative'>
+                                <img className='w-full h-full object-cover hover:grayscale transition-all hover:translate-x-2 hover:-translate-y-2' src={users.thumbnail} alt="" />
+
+                                <div className=' bottom-0 right-0 w-full h-full '>
+
+                                </div>
+
+                            </div>
                         </div>
 
-                    </button>
-                </Link>
-            ))}
+                    </Link>
+                ))}
 
 
 
 
 
 
-        </div >
+            </div >
+        </>
 
 
     )

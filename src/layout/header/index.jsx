@@ -3,13 +3,16 @@ import Menu from './menu'
 import Search from './search'
 
 
+
+
+
 function Header() {
     return (
-        <header className='mt-5 w-full h-[100px] flex-col items-center justify-between sticky top-0 bg-black/[.80] z-10 backdrop-blur-md'>
+        <header className='w-[1600px] h-[70px] flex items-center justify-between'>
+
             <Menu />
-            <div className='mt-8'>
-                <Search />
-            </div>
+            <Search />
+
         </header>
     )
 }

@@ -2,18 +2,11 @@ import React from 'react'
 
 function TopHeader() {
     return (
-        <div className='w-full h-8 bg-[#1d2229a6]'>
+        <div className='w-full flex items-center justify-center bg-[#272B30]'>
 
-            <div className='w-full h-full flex items-center justify-end pr-3 text-[12px]'>
+            <div className='w-[1600px] flex items-center justify-center'>
+                <img width="150px" height="150px" src="https://cdn-bgp.bluestacks.com/BGP/tr/logo_com.goatgames.dhs.gb.gp.png" alt="" />
 
-                <ul className='flex items-center justify-center gap-2 text-[#EEEEEEa6] leading-5 cursor-pointer'>
-                    <li className='hover:text-[#EEEEEE]'>
-                        Çerez politikaları
-                    </li>
-                    <li className='hover:text-[#EEEEEE]'>
-                        Gizlilik
-                    </li>
-                </ul>
             </div>
 
         </div>

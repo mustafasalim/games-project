@@ -20,18 +20,19 @@ function ActionRpg() {
                 <div>
                     {users.genre === "Action RPG" && (
                         <Link to={users.game_url}>
-                            <button
-                                style={{
-                                    backgroundColor: "#" + color
-                                }}
-                                onMouseOver={generateColor} className='w-[400px] m-5  rounded-md overflow-hidden relative'>
-                                <img className='w-full h-full object-cover transition-all hover:translate-x-2 hover:-translate-y-2' src={users.thumbnail} alt="" />
+                            <div className='shadow-2xl m-5'>
+                                <div
+                                    style={{
+                                        backgroundColor: "#" + color
+                                    }}
+                                    onMouseOver={generateColor} className='w-[400px]  rounded-md overflow-hidden relative'>
+                                    <img className='w-full h-full object-cover hover:grayscale transition-all hover:translate-x-2 hover:-translate-y-2' src={users.thumbnail} alt="" />
 
-                                <div className='absolute bottom-0 right-0 px-4 bg-gray-800'>
-                                    {users.platform}
+
+
                                 </div>
+                            </div>
 
-                            </button>
                         </Link>
                     )}
                 </div>

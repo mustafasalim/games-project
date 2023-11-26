@@ -1,12 +1,17 @@
 import React from 'react'
 import { CiSearch } from "react-icons/ci";
+import { useState } from 'react';
 function Search() {
+    const [search, setSearch] = useState("")
+
     return (
-        <div className='flex items-center justify-center '>
+        <div>
 
             <label className='flex items-center justify-center relative'>
-                <input className='w-auto p-4 h-4 rounded-md bg-[#13161b] text-[#EEEEEEa6] focus:outline-none focus:outline-[#1d2229a6]' placeholder='Search..' type="text" />
-                <div className='absolute right-0 mr-2'>
+                <input
+                    onChange={(e) => setSearch(e.target.value)}
+                    className=' p-4 h-4  rounded-md overflow-hidden w-[30px] bg-[#13161b] text-[15px] text-[#EEEEEEa6] transition-all focus:w-[200px] focus:outline-none  focus:border-2 focus:border-purple-500' placeholder='Search..' type="text" />
+                <div className='absolute cursor-pointer right-0 mr-2 '>
                     <CiSearch />
                 </div>
 
@@ -16,3 +21,4 @@ function Search() {
 }
 
 export default Search
+

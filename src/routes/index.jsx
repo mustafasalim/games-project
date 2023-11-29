@@ -11,6 +11,8 @@ import Arpg from "../pages/arpg"
 import ActionRpg from "../pages/actionRpg"
 import BattleRoyale from "../pages/battleRoyale"
 import Strategy from "../pages/strategy"
+import NotFound from "../pages/notfound"
+
 
 const routes = createBrowserRouter([
 
@@ -70,11 +72,9 @@ const routes = createBrowserRouter([
                 path: "/strategy",
                 element: <Strategy />
             },
-
-
             {
                 path: "*",
-                element: "notfnud"
+                element: <NotFound />
             }
         ]
     },

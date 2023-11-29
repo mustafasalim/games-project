@@ -14,7 +14,7 @@ function Arpg() {
     }, [])
 
     return (
-        <div className='flex flex-wrap justify-center'>
+        <div className='mt-10 flex flex-wrap justify-center'>
             {gameDetail && gameDetail.map(users => (
 
                 <div>

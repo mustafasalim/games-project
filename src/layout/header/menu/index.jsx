@@ -13,7 +13,7 @@ function Menu() {
             <ul className='gap-x-4 flex items-center justify-center'>
                 {mainMenu.map(menu => (
 
-                    <NavLink to={menu.path} className=" p-4 h-4 bg-[#13161b] text-[#EEEEEEa6] text-[15px] font-bold hover:border hover:border-purple-500 transition-all leading-6 flex items-center justify-center rounded-md hover:translate-y-1">
+                    <NavLink to={menu.path} className=" p-4 h-4 bg-[#1d1f22] text-[#EEEEEEa6] hover:text-red-500 text-[15px] font-bold hover:border-red-500 transition-all leading-6 flex items-center justify-center rounded-md hover:translate-y-1">
 
 
                         {menu.title}

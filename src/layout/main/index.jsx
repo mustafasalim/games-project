@@ -2,8 +2,8 @@ import React from 'react'
 import { Outlet } from 'react-router-dom'
 import TopHeader from '../top-header'
 import Header from '../header'
-import RecommendedGames from '../../components/recomendedGmes'
 import Slider from '../../components/slider'
+import Fotter from '../footer'
 
 function MainLayout() {
     return (
@@ -20,6 +20,7 @@ function MainLayout() {
                     <Outlet />
                 </main>
             </main>
+            <Fotter />
         </div>
     )
 }

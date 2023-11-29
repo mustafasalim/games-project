@@ -2,13 +2,16 @@ import React, { useEffect, useState } from 'react'
 import { getPost } from '../../services/post'
 import { Link } from 'react-router-dom'
 import useGenerateRandomColor from '../../components/randomColor'
-import Search from '../../layout/header/search'
 import RecommendedGames from '../../components/recomendedGmes'
+import { useSelector } from "react-redux"
 
 function Home() {
+    const searchTerm = useSelector((state) => state.items.searchTerm);
+
 
 
     const { color, generateColor } = useGenerateRandomColor();
+
     const [gameDetail, setGameDatail] = useState(false)
     useEffect(() => {
 
@@ -29,9 +32,13 @@ function Home() {
 
             <div className=' flex flex-wrap justify-center'>
 
-                {gameDetail && gameDetail.map(users => (
+                {gameDetail && gameDetail.filter((item) => {
 
-                    <Link to={users.game_url}>
+                    return searchTerm.toLowerCase() === "" ? item : item.title.toLowerCase().includes(searchTerm)
+
+                }).map(users => (
+
+                    <Link key={users.id} to={users.game_url}>
                         <div className='shadow-2xl m-5 '>
                             <div
                                 style={{

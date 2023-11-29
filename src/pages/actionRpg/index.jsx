@@ -3,8 +3,11 @@ import { useEffect, useState } from 'react'
 import { getPost } from '../../services/post'
 import { Link } from 'react-router-dom'
 import useGenerateRandomColor from '../../components/randomColor'
+import { useSelector } from "react-redux"
 
 function ActionRpg() {
+
+    const searchTerm = useSelector((state) => state.items.searchTerm);
     const { color, generateColor } = useGenerateRandomColor();
     const [gameDetail, setGameDatail] = useState(false)
     useEffect(() => {
@@ -15,7 +18,11 @@ function ActionRpg() {
 
     return (
         <div className='mt-10 flex flex-wrap justify-center'>
-            {gameDetail && gameDetail.map(users => (
+            {gameDetail && gameDetail.filter((item) => {
+
+                return searchTerm.toLowerCase() === "" ? item : item.title.toLowerCase().includes(searchTerm)
+
+            }).map(users => (
 
                 <div>
                     {users.genre === "Action RPG" && (

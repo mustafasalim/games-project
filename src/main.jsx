@@ -3,13 +3,16 @@ import * as ReactDOM from "react-dom/client";
 import routes from '../src/routes'
 import { RouterProvider } from 'react-router-dom'
 import "./assets/css/tailwind.css"
+import store from "../src/stores/index"
+import { Provider } from 'react-redux';
 
-//https://www.freepnglogos.com/uploads/games-png/games-controller-game-icon-17.png
-//logo
+
 
 
 ReactDOM.createRoot(document.getElementById('root')).render(
 
-  <RouterProvider router={routes} />
+  <Provider store={store}>
+    <RouterProvider router={routes} />
+  </Provider>
 
 )

@@ -1,5 +1,4 @@
 import React from 'react'
-import { useState, useEffect } from 'react'
 import { mainMenu } from '../../../utils/const'
 import { NavLink } from 'react-router-dom'
 
